@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Play, FileText, Mic, CheckSquare, AudioLines, BookOpen, Check } from 'lucide-react'
+import { Play, FileText, AudioLines, BookOpen, Check } from 'lucide-react'
 import { FeatureRow } from './FeatureRow'
 
 /* ── Mockup schematics ── */
