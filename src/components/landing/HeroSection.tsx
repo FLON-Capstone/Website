@@ -66,8 +66,9 @@ export function HeroSection() {
                 variant="ghost"
                 size="lg"
                 className="!bg-transparent !text-white !border-white hover:!bg-white/10 hover:!border-white"
+                onClick={() => document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                See How It Works
+                Features
               </Button>
             </motion.div>
 
