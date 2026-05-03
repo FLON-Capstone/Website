@@ -236,7 +236,7 @@ export function EarlyAccessPage() {
                     {fsState.submitting ? 'Joining…' : 'Join the waitlist'}
                   </Button>
 
-                  {fsState.errors && fsState.errors.length > 0 && (
+                  {fsState.errors && fsState.errors.getFormErrors().length > 0 && (
                     <p className="font-sans text-[12px] text-red-500 text-center">Something went wrong. Please try again.</p>
                   )}
 
