@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useForm } from '@formspree/react'
 import { motion } from 'framer-motion'
 import { useSearchParams } from 'react-router-dom'
 import { Headphones, BookOpen, Zap } from 'lucide-react'
@@ -32,11 +33,11 @@ const features = [
 export function EarlyAccessPage() {
   const [searchParams] = useSearchParams()
   const [form, setForm] = useState({ name: '', email: searchParams.get('email') ?? '', role: '' })
-  const [submitted, setSubmitted] = useState(false)
-  const [errors, setErrors] = useState<{ name?: string; email?: string; role?: string }>({})
+  const [fieldErrors, setFieldErrors] = useState<{ name?: string; email?: string; role?: string }>({})
+  const [fsState, fsSubmit] = useForm('xaqvqjgb')
 
   function validate() {
-    const e: typeof errors = {}
+    const e: typeof fieldErrors = {}
     if (!form.name.trim()) e.name = 'Name is required'
     if (!form.email.trim()) e.email = 'Email is required'
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) e.email = 'Enter a valid email'
@@ -44,11 +45,12 @@ export function EarlyAccessPage() {
     return e
   }
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
-    const e2 = validate()
-    if (Object.keys(e2).length) { setErrors(e2); return }
-    setSubmitted(true)
+    const errs = validate()
+    if (Object.keys(errs).length) { setFieldErrors(errs); return }
+    setFieldErrors({})
+    await fsSubmit({ name: form.name, email: form.email, role: form.role })
   }
 
   return (
@@ -144,7 +146,7 @@ export function EarlyAccessPage() {
             className="rounded-2xl p-8 bg-white border border-white/10"
             style={{ boxShadow: '0 24px 64px rgba(0,0,0,0.35)' }}
           >
-            {submitted ? (
+            {fsState.succeeded ? (
               <motion.div
                 initial={{ opacity: 0, scale: 0.96 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -187,7 +189,7 @@ export function EarlyAccessPage() {
                       placeholder="Maya Chen"
                       className="h-10 px-4 rounded-lg border border-[var(--border-medium)] bg-white font-sans text-[14px] text-[var(--text-primary)] placeholder:text-[var(--text-tertiary)] outline-none focus:ring-2 focus:ring-[var(--accent-blue)] focus:border-transparent transition-all duration-[140ms]"
                     />
-                    {errors.name && <p className="font-sans text-[12px] text-red-500">{errors.name}</p>}
+                    {fieldErrors.name && <p className="font-sans text-[12px] text-red-500">{fieldErrors.name}</p>}
                   </div>
 
                   {/* Email */}
@@ -202,7 +204,7 @@ export function EarlyAccessPage() {
                       placeholder="maya@yale.edu"
                       className="h-10 px-4 rounded-lg border border-[var(--border-medium)] bg-white font-sans text-[14px] text-[var(--text-primary)] placeholder:text-[var(--text-tertiary)] outline-none focus:ring-2 focus:ring-[var(--accent-blue)] focus:border-transparent transition-all duration-[140ms]"
                     />
-                    {errors.email && <p className="font-sans text-[12px] text-red-500">{errors.email}</p>}
+                    {fieldErrors.email && <p className="font-sans text-[12px] text-red-500">{fieldErrors.email}</p>}
                   </div>
 
                   {/* Role */}
@@ -227,12 +229,16 @@ export function EarlyAccessPage() {
                         </button>
                       ))}
                     </div>
-                    {errors.role && <p className="font-sans text-[12px] text-red-500">{errors.role}</p>}
+                    {fieldErrors.role && <p className="font-sans text-[12px] text-red-500">{fieldErrors.role}</p>}
                   </div>
 
-                  <Button type="submit" variant="primary" size="lg" className="w-full mt-1 !h-11 !text-[15px]">
-                    Join the waitlist
+                  <Button type="submit" variant="primary" size="lg" className="w-full mt-1 !h-11 !text-[15px]" disabled={fsState.submitting}>
+                    {fsState.submitting ? 'Joining…' : 'Join the waitlist'}
                   </Button>
+
+                  {fsState.errors && fsState.errors.length > 0 && (
+                    <p className="font-sans text-[12px] text-red-500 text-center">Something went wrong. Please try again.</p>
+                  )}
 
                   <p className="font-sans text-[12px] text-[var(--text-tertiary)] text-center">
                     No spam. Unsubscribe at any time.
