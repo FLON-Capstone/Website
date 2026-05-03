@@ -4,6 +4,7 @@ import { FeatureShowcase } from '../components/landing/FeatureShowcase'
 import { HowItWorks } from '../components/landing/HowItWorks'
 import { IntegrationsSection } from '../components/landing/IntegrationsSection'
 import { SocialProof } from '../components/landing/SocialProof'
+import { PricingSection } from '../components/landing/PricingSection'
 import { FinalCTA } from '../components/landing/FinalCTA'
 
 export function LandingPage() {
@@ -15,6 +16,7 @@ export function LandingPage() {
       <HowItWorks />
       <IntegrationsSection />
       <SocialProof />
+      <PricingSection />
       <FinalCTA />
     </main>
   )
