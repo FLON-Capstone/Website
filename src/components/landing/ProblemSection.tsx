@@ -49,6 +49,7 @@ export function ProblemSection() {
           {problems.map((p, i) => (
             <motion.div
               key={p.label}
+              className="h-full"
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-60px' }}

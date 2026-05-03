@@ -11,6 +11,7 @@ export function PainPointCard({ Icon, label, description, image }: PainPointCard
   return (
     <div
       className="
+        h-full flex flex-col
         bg-[var(--bg-primary)] rounded-lg overflow-hidden
         border border-[var(--border-subtle)]
         transition-all duration-[140ms] ease-out
@@ -30,11 +31,11 @@ export function PainPointCard({ Icon, label, description, image }: PainPointCard
       }}
     >
       {image && (
-        <div className="h-36 overflow-hidden">
+        <div className="h-48 flex-shrink-0 overflow-hidden">
           <img src={image} alt="" className="w-full h-full object-cover" aria-hidden="true" />
         </div>
       )}
-      <div className="p-8">
+      <div className="p-8 flex flex-col flex-grow">
         <div className="inline-flex items-center justify-center w-10 h-10 rounded-md bg-[var(--accent-blue-light)]">
           <Icon size={20} color="var(--accent-blue)" strokeWidth={1.75} />
         </div>
