@@ -20,7 +20,7 @@ export function FinalCTA() {
           </h2>
 
           <p className="font-sans font-normal text-[15px] text-[var(--text-secondary)] leading-relaxed mb-8 max-w-[480px] mx-auto">
-            Join thousands of students who use Reverb to take control of their schedule.
+            Join thousands of students who use Reverb to stop guessing and start executing.
           </p>
 
           <div className="flex justify-center">

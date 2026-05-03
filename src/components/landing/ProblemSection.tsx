@@ -1,27 +1,27 @@
 import { motion } from 'framer-motion'
-import { Layers, Clock, Brain } from 'lucide-react'
+import { Layers, ListTodo, MonitorOff } from 'lucide-react'
 import { PainPointCard } from './PainPointCard'
 
 const problems = [
   {
     Icon: Layers,
-    label: 'Everything is scattered',
+    label: 'Six apps. Zero clarity.',
     description:
-      'Your notes, syllabus, emails, and calendar live in five different places. Reverb pulls them together.',
+      'The average student uses 6+ tools to track assignments, deadlines, and meetings — none of which talk to each other. Reverb pulls it all into one place.',
     image: '/windows-v94mlgvsza4-unsplash.jpg',
   },
   {
-    Icon: Clock,
-    label: 'No time to sit and read',
+    Icon: ListTodo,
+    label: 'You know what\'s due. Not what to do next.',
     description:
-      'Between classes, commutes, and the gym, focused reading time is a fantasy. Your ears are free when your eyes aren\'t.',
+      '41% of knowledge workers spend more time figuring out what to work on than actually working. Reverb closes that gap.',
     image: '/loic-furhoff-qeIaMQP_xQE-unsplash.jpg',
   },
   {
-    Icon: Brain,
-    label: 'Information overload',
+    Icon: MonitorOff,
+    label: 'No desk time? No problem.',
     description:
-      'You know you have things due. You just don\'t know which one to tackle right now, or why.',
+      'Productivity tools assume you\'re sitting at a computer. Reverb meets you where you are — walking to class, at the gym, between meetings.',
     image: '/busystudent.jpg',
   },
 ]

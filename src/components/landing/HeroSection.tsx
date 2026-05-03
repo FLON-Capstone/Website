@@ -50,14 +50,14 @@ export function HeroSection() {
               className="font-sans font-normal text-white leading-[1.1] mb-6"
               style={{ fontSize: 'clamp(38px, 5.5vw, 72px)' }}
             >
-              Your day,<br />in your ears.
+              Know exactly<br />what to do next.
             </motion.h1>
 
             <motion.p
               {...fadeUp(0.2)}
               className="font-sans font-normal text-[17px] text-white/80 leading-relaxed max-w-[480px] mb-8"
             >
-              Reverb is an AI-powered platform that brings your assignments, schedule, and deadlines into one clear daily plan so you always know exactly what to do next. Stay organized and ahead of every goal with an intelligent workflow that knows what to prioritize.
+              Reverb synthesizes your calendar, email, and coursework into a daily briefing and prioritized action plan — delivered as a 5-minute audio briefing, a skimmable one-pager, or both. In whatever format fits the moment.
             </motion.p>
 
             <motion.div {...fadeUp(0.3)} className="flex flex-wrap items-center gap-4 mb-8">

@@ -5,25 +5,25 @@ const steps = [
     number: '01',
     title: 'Connect your world',
     description:
-      'Link your calendar, upload syllabi, forward emails. One-time setup. Two minutes.',
+      'Link your calendar, email, Canvas, and Slack. One-time setup. Two minutes.',
   },
   {
     number: '02',
-    title: 'Reverb learns your schedule',
+    title: 'Reverb synthesizes your day',
     description:
-      'The AI maps your deadlines, flags what matters, and queues the content that needs your attention.',
+      'The AI maps your deadlines, flags urgent items, and builds a prioritized picture of exactly what needs your attention — and in what order.',
   },
   {
     number: '03',
-    title: 'Press play',
+    title: 'Get your Briefing and Action Stack',
     description:
-      'Your daily briefing is ready each morning. Study sessions on demand. Everything in your ears.',
+      'Your Briefing is ready each morning — audio or text, your choice. Your Action Stack tells you what to tackle first and sends nudges as your day shifts.',
   },
   {
     number: '04',
     title: 'Stay in control',
     description:
-      'Review transcripts, edit the Action Stack, search anything. Audio-first, but never audio-only.',
+      'Review transcripts, edit your stack, search anything. Reverb works in whatever format fits the moment — never just one mode.',
   },
 ]
 
