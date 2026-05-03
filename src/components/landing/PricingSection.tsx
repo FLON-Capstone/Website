@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { Check, Minus } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 type FeatureValue = true | false | string
 
@@ -121,7 +122,7 @@ const plans = [
     priceNote: 'No credit card required',
     description: 'Try the core experience.',
     target: 'Trial users, casual students',
-    cta: 'Get started',
+    cta: 'Get Early Access',
     isHighlighted: false,
     badge: null,
     featureKey: 'free' as const,
@@ -147,7 +148,7 @@ const plans = [
     priceNote: 'min 10 seats',
     description: 'For teams that move together.',
     target: 'Sports teams, consulting firms, sales orgs',
-    cta: 'Contact us',
+    cta: 'Get Early Access',
     isHighlighted: false,
     badge: null,
     featureKey: 'enterprise' as const,
@@ -281,14 +282,14 @@ export function PricingSection() {
                   </p>
 
                   {/* CTA */}
-                  <a
-                    href="/early-access"
+                  <Link
+                    to="/early-access"
                     className="block text-center rounded-full font-sans font-semibold transition-all duration-[140ms]"
                     style={{
                       fontSize: 14,
                       padding: '10px 0',
                       background: isBlue ? '#ffffff' : 'transparent',
-                      color: isBlue ? 'var(--accent-blue)' : 'var(--accent-blue)',
+                      color: 'var(--accent-blue)',
                       border: isBlue ? 'none' : '1.5px solid var(--accent-blue)',
                     }}
                     onMouseEnter={e => {
@@ -307,7 +308,7 @@ export function PricingSection() {
                     }}
                   >
                     {plan.cta}
-                  </a>
+                  </Link>
                 </div>
 
                 {/* Divider */}
