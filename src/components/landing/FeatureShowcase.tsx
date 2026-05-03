@@ -61,7 +61,7 @@ function RecordingMockup() {
   const lines = [
     { ts: '00:03', text: 'The key difference between supervised and unsupervised learning is...', active: true },
     { ts: '00:18', text: 'In supervised learning, the model is trained on labeled data.' },
-    { ts: '00:31', text: 'Action item: Review chapter 4 before Friday\'s exam.' },
+    { ts: '00:31', text: 'Action item flagged. Review chapter 4 before Friday\'s exam.' },
   ]
   return (
     <div className="space-y-3">
@@ -89,7 +89,7 @@ function RecordingMockup() {
 function ActionStackMockup() {
   const tasks = [
     { label: 'Review Econ lecture notes', time: '45 min', due: 'Due Friday', urgency: 'urgent', done: false },
-    { label: 'Email Prof. Heller re: extension', time: '10 min', due: 'Due tomorrow', urgency: 'soon', done: false },
+    { label: 'Email Prof. Heller about extension', time: '10 min', due: 'Due tomorrow', urgency: 'soon', done: false },
     { label: 'Read Ch. 7, Micro', time: '30 min', due: 'Due next week', urgency: 'later', done: true },
   ]
   const urgencyStyles: Record<string, string> = {
@@ -146,7 +146,7 @@ const features = [
     label: 'Daily Briefing',
     headline: 'Your morning, already organized.',
     description: 'Every day starts with a synthesized snapshot of your day — deadlines, flagged emails, today\'s schedule, and urgent items. Get it as a 5-minute audio briefing or a skimmable one-pager. Pulls from your calendar, email, Canvas, and Slack.',
-    bullets: ['Audio briefing or text one-pager — your call', 'Compiled from your calendar, inbox, and coursework', 'Ready every morning before you open your device'],
+    bullets: ['Audio briefing or text one-pager. You choose.', 'Compiled from your calendar, inbox, and coursework', 'Ready every morning before you open your device'],
     mockup: <BriefingMockup />,
     reverse: false,
   },
@@ -154,7 +154,7 @@ const features = [
     number: '02',
     label: 'Action Stack',
     headline: 'Always know what to do next.',
-    description: 'The Action Stack translates your Briefing into a prioritized, time-boxed to-do list. Reverb breaks large tasks into realistic work blocks and sends smart nudges throughout the day — what to start, what to continue, and when to wrap up.',
+    description: 'The Action Stack translates your Briefing into a prioritized, time-boxed to-do list. Reverb breaks large tasks into realistic work blocks and sends smart nudges throughout the day on what to start, continue, and wrap up.',
     bullets: ['Priority-sorted with urgency indicators', 'Smart nudges adapt as your schedule shifts', 'Time-boxed blocks so you can actually plan your day'],
     mockup: <ActionStackMockup />,
     reverse: true,
@@ -163,7 +163,7 @@ const features = [
     number: '03',
     label: 'Study Mode',
     headline: 'Upload once. Learn anywhere.',
-    description: 'Drop in a PDF, lecture slide, or reading. Choose your format — Lecture, Podcast, or Response — and press play. Reverb handles the rest.',
+    description: 'Drop in a PDF, lecture slide, or reading. Choose from Lecture, Podcast, or Response and press play. Reverb handles the rest.',
     bullets: ['Three formats for three different learning modes', 'Synchronized transcript with active line highlight', 'Speed controls and skip ahead'],
     mockup: <StudyMockup />,
     reverse: false,

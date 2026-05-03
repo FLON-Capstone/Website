@@ -7,7 +7,7 @@ const problems = [
     Icon: Layers,
     label: 'Six apps. Zero clarity.',
     description:
-      'The average student uses 6+ tools to track assignments, deadlines, and meetings — none of which talk to each other. Reverb pulls it all into one place.',
+      'The average student uses 6+ tools to track assignments, deadlines, and meetings. None of them talk to each other. Reverb pulls it all into one place.',
     image: '/windows-v94mlgvsza4-unsplash.jpg',
   },
   {
@@ -21,7 +21,7 @@ const problems = [
     Icon: MonitorOff,
     label: 'No desk time? No problem.',
     description:
-      'Productivity tools assume you\'re sitting at a computer. Reverb meets you where you are — walking to class, at the gym, between meetings.',
+      'Productivity tools assume you\'re sitting at a computer. Reverb meets you at the gym, on your commute, between classes.',
     image: '/busystudent.jpg',
   },
 ]

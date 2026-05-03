@@ -57,7 +57,7 @@ export function HeroSection() {
               {...fadeUp(0.2)}
               className="font-sans font-normal text-[17px] text-white/80 leading-relaxed max-w-[480px] mb-8"
             >
-              Reverb synthesizes your calendar, email, and coursework into a daily briefing and prioritized action plan — delivered as a 5-minute audio briefing, a skimmable one-pager, or both. In whatever format fits the moment.
+              Reverb synthesizes your calendar, email, and coursework into a daily briefing and prioritized action plan. Available as a 5-minute audio briefing, a skimmable one-pager, or both. Whatever fits the moment.
             </motion.p>
 
             <motion.div {...fadeUp(0.3)} className="flex flex-wrap items-center gap-4 mb-8">

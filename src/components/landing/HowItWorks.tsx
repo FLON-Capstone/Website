@@ -17,13 +17,13 @@ const steps = [
     number: '03',
     title: 'Get your Briefing and Action Stack',
     description:
-      'Your Briefing is ready each morning — audio or text, your choice. Your Action Stack tells you what to tackle first and sends nudges as your day shifts.',
+      'Your Briefing is ready each morning. Audio or text, your choice. Your Action Stack tells you what to tackle first and sends nudges as your day shifts.',
   },
   {
     number: '04',
     title: 'Stay in control',
     description:
-      'Review transcripts, edit your stack, search anything. Reverb works in whatever format fits the moment — never just one mode.',
+      'Review transcripts, edit your stack, search anything. Reverb works in whatever format fits the moment. Never just one mode.',
   },
 ]
 

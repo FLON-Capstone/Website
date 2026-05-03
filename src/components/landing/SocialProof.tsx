@@ -14,7 +14,7 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     id: 1,
-    quote: "I used to miss assignments because I'd forget to check my calendar. Reverb's morning briefing caught a paper due at midnight — I had no idea. That alone was worth it.",
+    quote: "I used to miss assignments because I'd forget to check my calendar. Reverb's morning briefing caught a paper due at midnight. I had no idea. That alone was worth it.",
     name: 'Maya T.',
     descriptor: 'Senior · Psychology',
     timestamp: '00:01:12',
