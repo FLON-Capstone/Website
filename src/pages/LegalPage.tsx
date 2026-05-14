@@ -3,9 +3,9 @@ import { useLocation } from 'react-router-dom'
 import { Button } from '../components/ui/Button'
 
 const NAV_LINKS = [
+  { label: 'Data Protection', href: '#data-protection' },
   { label: 'Terms of Service', href: '#terms' },
   { label: 'Developer Support', href: '#contact' },
-  { label: 'Data Protection', href: '#data-protection' },
 ]
 
 const INPUT_CLASS =
@@ -49,7 +49,32 @@ export function LegalPage() {
         </div>
       </div>
 
-      <div className="max-w-3xl mx-auto px-6 py-16 flex flex-col gap-20">
+      <div className="max-w-3xl mx-auto px-6 pt-24 pb-16 flex flex-col gap-20">
+
+        {/* Data Protection */}
+        <section id="data-protection" className="flex flex-col gap-5 scroll-mt-28">
+          <div>
+            <h2 className="font-sans font-semibold text-[28px] text-[var(--text-primary)] mb-4">
+              Data Protection Notice
+            </h2>
+            <div className="h-px" style={{ background: 'var(--border-subtle)' }} />
+          </div>
+          <div className="flex flex-col gap-4 font-sans text-[16px] leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
+            <p>Reverb itself collects no data.</p>
+            <p>
+              There is programatic filtering of the data you choose to have handeled by the application,
+              so nothing is sent to an LLM for processing without first being approved by you.
+            </p>
+            <p>
+              Any data that you do opt-in for analysis is subject to AI risks, namely being used for
+              training models. We do our best at Reverb to keep your data safe, but LLM providers are
+              not always entirely transparent about user's data usage – opting in for any of Reverb's
+              services is 100% at your own data's risk.
+            </p>
+            <p>Thank you for being concerned about your data privacy.</p>
+            <p style={{ color: 'var(--text-primary)' }}>- ReverbTeam -</p>
+          </div>
+        </section>
 
         {/* Terms of Service */}
         <section id="terms" className="flex flex-col gap-5 scroll-mt-28">
@@ -65,7 +90,7 @@ export function LegalPage() {
         </section>
 
         {/* Developer Support Form */}
-        <section id="contact" className="flex flex-col gap-5 scroll-mt-28">
+        <section id="contact" className="flex flex-col gap-5 scroll-mt-28 pb-8">
           <div>
             <h2 className="font-sans font-semibold text-[28px] text-[var(--text-primary)] mb-4">
               Developer Support
@@ -130,31 +155,6 @@ export function LegalPage() {
               <Button type="submit" variant="primary" size="md">Send Message</Button>
             </div>
           </form>
-        </section>
-
-        {/* Data Protection */}
-        <section id="data-protection" className="flex flex-col gap-5 scroll-mt-28 pb-8">
-          <div>
-            <h2 className="font-sans font-semibold text-[28px] text-[var(--text-primary)] mb-4">
-              Data Protection Notice
-            </h2>
-            <div className="h-px" style={{ background: 'var(--border-subtle)' }} />
-          </div>
-          <div className="flex flex-col gap-4 font-sans text-[16px] leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
-            <p>Reverb itself collects no data.</p>
-            <p>
-              There is programatic filtering of the data you choose to have handeled by the application,
-              so nothing is sent to an LLM for processing without first being approved by you.
-            </p>
-            <p>
-              Any data that you do opt-in for analysis is subject to AI risks, namely being used for
-              training models. We do our best at Reverb to keep your data safe, but LLM providers are
-              not always entirely transparent about user's data usage – opting in for any of Reverb's
-              services is 100% at your own data's risk.
-            </p>
-            <p>Thank you for being concerned about your data privacy.</p>
-            <p style={{ color: 'var(--text-primary)' }}>- ReverbTeam -</p>
-          </div>
         </section>
 
       </div>

@@ -27,7 +27,7 @@ export function Footer() {
 
   return (
     <footer style={{ background: 'var(--accent-blue)' }}>
-      <div className="max-w-6xl mx-auto px-6 py-14 flex flex-col md:flex-row items-start md:items-center gap-12">
+      <div className="max-w-6xl mx-auto px-6 py-14 flex flex-col md:flex-row items-stretch gap-12">
 
         {/* Left: logo + nav links */}
         <div className="flex flex-col gap-7 flex-shrink-0">
@@ -93,8 +93,10 @@ export function Footer() {
         </div>
 
         {/* Right: ambient soundwave */}
-        <div className="flex-1 flex items-center justify-center md:justify-end">
-          <FooterWaveform />
+        <div className="flex-1 relative min-h-[160px]">
+          <div className="absolute inset-6">
+            <FooterWaveform />
+          </div>
         </div>
       </div>
 

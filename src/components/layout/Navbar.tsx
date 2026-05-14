@@ -73,7 +73,7 @@ export function Navbar() {
           <WaveformGlyph />
           <span
             className="font-sans font-semibold text-[18px] tracking-tight transition-colors duration-300"
-            style={{ color: scrolled ? '#0f172a' : 'white' }}
+            style={{ color: scrolled ? 'var(--accent-blue)' : 'white' }}
           >
             Reverb
           </span>
